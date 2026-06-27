@@ -1,0 +1,9 @@
+{
+  "name": "Mellstroy",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "discord.js": "^14.17.0",
+    "dotenv": "^16.4.5"
+  }
+}

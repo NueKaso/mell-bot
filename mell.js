@@ -15,7 +15,14 @@ const phrases = [
     "Я уже красный!",
     "Ам ам ам",
     "Герман довгань!"
-]
+];
+
+const csz = [
+    "Бурмалда",
+    "Догхаус",
+    "Зевсятина"
+
+];
 
 client.once('clientReady', () => [
   console.log("Ready!")
@@ -28,6 +35,15 @@ client.on("messageCreate", async (message) =>{
     if (message.content.toLowerCase().includes("меллстрой")) {
         try {
             const randPhrase = phrases[Math.floor(Math.random() * phrases.length)]
+            await message.reply(randPhrase)
+        } catch(error) {
+            console.error("Error")
+        }
+    };
+
+    if (message.content.toLowerCase().includes("казино")) {
+        try {
+            const randPhrase = csz[Math.floor(Math.random() * csz.length)]
             await message.reply(randPhrase)
         } catch(error) {
             console.error("Error")
